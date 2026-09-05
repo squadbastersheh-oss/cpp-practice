@@ -1,0 +1,53 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int age;
+	string name;
+	cout<<"сколько тебе лет?"<<endl;
+
+		if(!(cin>>age)) {
+		cout<<"ты только что попытался ввести текст в строку для возраста?..."<<endl;
+		return 0;
+	}
+	else if(age < 0) {
+		cout<<"ты еще не родился!"<<endl;
+		return 0;
+	}
+	else if(age > 130) {
+		cout<<"ты не мог столько прожить!"<<endl;
+		return 0;
+		}
+	else if( age >= 0 && age <= 5 ) {
+		cout<<"не думаю что в таком возрасте ты бы умел пользоваться данным устройством..."<<endl;
+		return 0;
+	}
+	else if(age == 18) {
+		cout<<"тебе ровно 18 лет!"<<endl;
+	}
+	else if( age >= 6 && age <= 12) {
+		cout<<"ты еще маловат"<<endl;
+	}
+	else if(age >= 13 && age <=17) {
+		cout<<"ты уже подросток!"<<endl;
+	}
+	else if(age == 67) {
+		cout<<"six seveeen"<<endl;
+		}	
+		else {
+		cout<<"ты довольно взрослый"<<endl;
+		}
+	cout<<"как тебя зовут?"<<endl;
+	cin.ignore();
+	getline(cin, name);
+	
+	if(name == "stelsik") {
+		cout<<"либо вы разработчик,либо ты просто взял его псевдоним..."<<endl;
+		cout<<"здравствуй разработчик или обычный пользователь с псевдонимом как у разработчика "<<name<<"! Тебе целых "<<age<<" лет!"<<endl;
+		cout<<"может попробовать поискать другие концовки? ;)"<<endl;
+		return 0;
+	}
+	cout<<"здравствуй "<<name<<"! Тебе целых "<<age<<" лет!"<<endl;
+	cout<<"может попробовать поискать другие концовки? ;)"<<endl;
+	return 0;
+}
